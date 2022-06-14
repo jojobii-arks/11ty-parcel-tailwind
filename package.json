@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "npm-run-all -p dev:*",
     "dev:11ty": "eleventy --watch",
-    "dev:parcel": "parcel .predist/**/*.html",
+    "dev:parcel": "parcel .predist/**/*.html .predist/*.html",
     "build": "npm-run-all build:*",
     "build:11ty": "eleventy",
-    "build:parcel": "parcel build .predist/**/*.html"
+    "build:parcel": "parcel build .predist/**/*.html .predist/*.html"
   },
   "keywords": [],
   "author": "",
