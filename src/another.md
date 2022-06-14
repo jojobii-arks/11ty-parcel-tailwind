@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: top.njk
 ---
 
 # this is another page

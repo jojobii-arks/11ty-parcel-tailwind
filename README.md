@@ -6,10 +6,13 @@
   npm run dev
 ```
 
-Runs 11ty dev server to render out templates, whilst Parcel handles CSS changes.
+11ty watches for changes in template files and outputs to `.predist`
+Parcel watches for changes in `.predist` and outputs/serves from `dist`
 
 ## Build for hosting
 
 ```
   npm run build
 ```
+
+Outputs to `dist`, serve with `dist` as root.

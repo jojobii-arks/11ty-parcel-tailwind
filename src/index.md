@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: prose.njk
 ---
 
 # this is the main page!
