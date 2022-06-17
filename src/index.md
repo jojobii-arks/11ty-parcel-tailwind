@@ -8,4 +8,4 @@ layout: prose.njk
 
 bababooey bababooey
 
-[to another page](yeetanother)
+[to another page]({{ "/yeetanother" | url }})

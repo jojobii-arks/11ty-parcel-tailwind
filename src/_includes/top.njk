@@ -7,15 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/assets/tailwind.css" />
   </head>
-  <body>
+  <body class="bg-base-100 min-h-screen">
     <header class="bg-base-300">
       <div class="navbar mx-auto max-w-3xl">
         <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl" href="/">daisyUI</a>
+          <a class="btn btn-ghost normal-case text-xl" href={{ "/" | url }}>daisyUI</a>
         </div>
+        bazinga
         <div class="flex-none">
           <ul class="menu menu-horizontal p-0">
-            <li><a href="/another">Another</a></li>
+            <li><a href={{ "/another" | url }}>Another</a></li>
           </ul>
         </div>
       </div>

@@ -8,7 +8,10 @@
     "dev:parcel": "parcel .predist/**/*.html .predist/*.html",
     "build": "npm-run-all build:*",
     "build:11ty": "eleventy",
-    "build:parcel": "parcel build .predist/**/*.html .predist/*.html"
+    "build:parcel": "parcel build .predist/**/*.html .predist/*.html --dist-dir build --public-url /11ty-parcel-tailwind",
+    "deploy": "npm-run-all build deploy:*",
+    "deploy:cname": "echo 'some cname' > ./build/CNAME",
+    "deploy:ghpages": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@tailwindcss/typography": "^0.5.2",
+    "gh-pages": "^4.0.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.6.0",
     "postcss": "^8.4.14",

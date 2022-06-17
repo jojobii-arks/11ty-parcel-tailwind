@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: 'src',
       output: '.predist'
-    }
+    },
+    pathPrefix: '/11ty-parcel-tailwind/'
   };
 };
