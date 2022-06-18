@@ -8,9 +8,9 @@
     "dev:parcel": "parcel .predist/**/*.html .predist/*.html",
     "build": "npm-run-all build:*",
     "build:11ty": "eleventy",
-    "build:parcel": "parcel build .predist/**/*.html .predist/*.html --dist-dir build --public-url /11ty-parcel-tailwind",
+    "build:parcel": ". ./.deployenv; parcel build .predist/**/*.html .predist/*.html --dist-dir build --public-url $PATH_PREFIX",
     "deploy": "npm-run-all build deploy:*",
-    "deploy:cname": "echo 'some cname' > ./build/CNAME",
+    "deploy:cname": ". ./.deployenv; echo $DOMAIN_NAME > ./build/CNAME",
     "deploy:ghpages": "gh-pages -d build"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "tailwindcss": "^3.1.2"
   },
   "dependencies": {
-    "daisyui": "^2.15.3"
+    "daisyui": "^2.15.3",
+    "dotenv": "^16.0.1"
   }
 }
